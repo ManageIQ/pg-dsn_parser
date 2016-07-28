@@ -1,5 +1,12 @@
 # PG::DSNParser
 
+[![Gem Version](https://badge.fury.io/rb/pg-dsn_parser.svg)](http://badge.fury.io/rb/pg-dsn_parser)
+[![Build Status](https://travis-ci.org/ManageIQ/pg-dsn_parser.svg)](https://travis-ci.org/ManageIQ/pg-dsn_parser)
+[![Code Climate](https://codeclimate.com/github/ManageIQ/pg-dsn_parser.svg)](https://codeclimate.com/github/ManageIQ/pg-dsn_parser)
+[![Test Coverage](https://codeclimate.com/github/ManageIQ/pg-dsn_parser/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/pg-dsn_parser/coverage)
+[![Dependency Status](https://gemnasium.com/ManageIQ/pg-dsn_parser.svg)](https://gemnasium.com/ManageIQ/pg-dsn_parser)
+[![Security](https://hakiri.io/github/ManageIQ/pg-dsn_parser/master.svg)](https://hakiri.io/github/ManageIQ/pg-dsn_parser/master)
+
 A parser for PostgreSQL DSNs
 
 ## Installation
