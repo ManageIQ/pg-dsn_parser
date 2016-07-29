@@ -1,4 +1,11 @@
 describe PG::DSNParser do
+  describe ".parse" do
+    it "parses a dsn using #parse" do
+      s = "host = localhost dbname=postgres user = 'postgres'"
+      expect(described_class.parse(s)).to eq(:host => "localhost", :dbname => "postgres", :user => "postgres")
+    end
+  end
+
   describe "#parse" do
     it "no spaces, no quotes" do
       s = "host=localhost"
