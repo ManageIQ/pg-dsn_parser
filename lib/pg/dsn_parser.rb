@@ -14,7 +14,7 @@ module PG
 
       until scanner.eos?
         # get the key by matching up to and including the (optionally) white space bordered '='
-        key = scanner.scan_until(/\s?=\s?/)
+        key = scanner.scan_until(/\s*=\s*/)
         key = key[0...-scanner.matched_size]
 
         dsn_hash[key.to_sym] = get_dsn_value(scanner)

@@ -37,6 +37,16 @@ describe PG::DSNParser do
       expect(subject.parse(s)).to eq(:host => "local host")
     end
 
+    it "multiple space around equals" do
+      s = "host =  localhost"
+      expect(subject.parse(s)).to eq(:host => "localhost")
+    end
+
+    it "multiple space around equals for second value" do
+      s = "host = localhost dbname =  vmdb_test"
+      expect(subject.parse(s)).to eq(:host => "localhost", :dbname => 'vmdb_test')
+    end
+
     it "spaces, quotes, quote in value" do
       s = "host = 'local\\'shost\\''"
       expect(subject.parse(s)).to eq(:host => "local'shost'")
