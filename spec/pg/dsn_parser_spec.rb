@@ -32,6 +32,11 @@ describe PG::DSNParser do
       expect(subject.parse(s)).to eq(:host => "local host")
     end
 
+    it "leading space before key" do
+      s = " host = 'local host'"
+      expect(subject.parse(s)).to eq(:host => "local host")
+    end
+
     it "spaces, quotes, quote in value" do
       s = "host = 'local\\'shost\\''"
       expect(subject.parse(s)).to eq(:host => "local'shost'")

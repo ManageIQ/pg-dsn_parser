@@ -8,7 +8,7 @@ module PG
     end
 
     def parse(dsn)
-      scanner = StringScanner.new(dsn)
+      scanner = StringScanner.new(dsn.strip)
 
       dsn_hash = {}
 
