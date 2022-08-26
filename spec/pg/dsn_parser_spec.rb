@@ -28,13 +28,28 @@ describe PG::DSNParser do
     end
 
     it "spaces, quotes, space in value" do
-      s = "host = 'local host'"
-      expect(subject.parse(s)).to eq(:host => "local host")
+      s = "password = 'pass word'"
+      expect(subject.parse(s)).to eq(:password => "pass word")
+    end
+
+    it "leading space before key" do
+      s = " password = 'pass word'"
+      expect(subject.parse(s)).to eq(:password => "pass word")
+    end
+
+    it "multiple space around equals" do
+      s = "host =  localhost"
+      expect(subject.parse(s)).to eq(:host => "localhost")
+    end
+
+    it "multiple space around equals for second value" do
+      s = "host = localhost dbname =  vmdb_test"
+      expect(subject.parse(s)).to eq(:host => "localhost", :dbname => 'vmdb_test')
     end
 
     it "spaces, quotes, quote in value" do
-      s = "host = 'local\\'shost\\''"
-      expect(subject.parse(s)).to eq(:host => "local'shost'")
+      s = "password = 'pass\\'sword\\''"
+      expect(subject.parse(s)).to eq(:password => "pass'sword'")
     end
 
     it "full dsn quoted" do
