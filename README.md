@@ -2,8 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/pg-dsn_parser.svg)](http://badge.fury.io/rb/pg-dsn_parser)
 [![CI](https://github.com/ManageIQ/pg-dsn_parser/actions/workflows/ci.yaml/badge.svg)](https://github.com/ManageIQ/pg-dsn_parser/actions/workflows/ci.yaml)
-[![Code Climate](https://codeclimate.com/github/ManageIQ/pg-dsn_parser.svg)](https://codeclimate.com/github/ManageIQ/pg-dsn_parser)
-[![Test Coverage](https://codeclimate.com/github/ManageIQ/pg-dsn_parser/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/pg-dsn_parser/coverage)
 
 A parser for PostgreSQL DSNs
 
